@@ -22,7 +22,7 @@ clear_history_key=${clear_history_key:-$default_clear_history_key}
 filename_suffix="#{session_name}-#{window_index}-#{pane_index}_%Y-%m-%d_%H-%M-%S.log"
 
 # Logging options
-default_logging_path="$NEORICALEX_HOME"
+default_logging_path="$NEORICALEX_HOME/vps"
 logging_path=$(tmux show-option -gqv "@logging-path")
 logging_path=${logging_path:-$default_logging_path}
 
