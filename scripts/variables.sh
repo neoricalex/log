@@ -19,14 +19,14 @@ clear_history_key=$(tmux show-option -gqv "@clear-history-key")
 clear_history_key=${clear_history_key:-$default_clear_history_key}
 
 # General options
-filename_suffix="#{session_name}-#{window_index}-#{pane_index}-%Y%m%dT%H%M%S.log"
+filename_suffix="#{session_name}-#{window_index}-#{pane_index}_%Y-%m-%d_%H-%M-%S.log"
 
 # Logging options
 default_logging_path="$NEORICALEX_HOME"
 logging_path=$(tmux show-option -gqv "@logging-path")
 logging_path=${logging_path:-$default_logging_path}
 
-default_logging_filename="tmux-${filename_suffix}"
+default_logging_filename="${filename_suffix}"
 logging_filename=$(tmux show-option -gqv "@logging-filename")
 logging_filename=${logging_filename:-$default_logging_filename}
 
